@@ -1,0 +1,49 @@
+services:
+  mongo-primary:
+    image: mongo:latest
+    ports:
+      - "6323:27017"
+    volumes:
+      - mongodb-data:/data/db
+    environment:
+      # Configurações do MongoDB
+      MONGODB_REPLICA_SET_NAME: my-replica-set
+      MONGODB_AUTH_MECHANISM: SCRAM
+      MONGODB_ROOT_USER: mongoadmin
+      MONGODB_ROOT_PASSWORD: secret2106
+      MONGODB_ENABLE_AUTH: true
+
+  mongo-secondary1:
+    image: mongo:latest
+    ports:
+      - "6324:27017"
+    volumes:
+      - mongodb-data:/data/db
+    depends_on:
+      - mongo-primary
+    environment:
+      # Configurações do MongoDB
+      MONGODB_REPLICA_SET_NAME: my-replica-set
+      MONGODB_AUTH_MECHANISM: SCRAM
+      MONGODB_ROOT_USER: mongoadmin
+      MONGODB_ROOT_PASSWORD: secret2106
+      MONGODB_ENABLE_AUTH: true
+
+  mongo-secondary2:
+    image: mongo:latest
+    ports:
+      - "6325:27017"
+    volumes:
+      - mongodb-data:/data/db
+    depends_on:
+      - mongo-primary
+    environment:
+      # Configurações do MongoDB
+      MONGODB_REPLICA_SET_NAME: my-replica-set
+      MONGODB_AUTH_MECHANISM: SCRAM
+      MONGODB_ROOT_USER: mongoadmin
+      MONGODB_ROOT_PASSWORD: secret2106
+      MONGODB_ENABLE_AUTH: true
+
+volumes:
+  mongodb-data:
