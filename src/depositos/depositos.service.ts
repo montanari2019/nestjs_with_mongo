@@ -1,9 +1,9 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateDepositoDto } from './dto/create-deposito.dto';
 import { UpdateDepositoDto } from './dto/update-deposito.dto';
-import * as xlsx from 'xlsx';
 import { PrismaService } from 'src/prisma/prisma.service';
 import * as fs from 'fs';
+import * as xlsx from 'xlsx';
 import * as path from 'path';
 import { Dado } from './entities/dada.entity';
 import { DepositoPrimitiveEntity } from './entities/depositos.primitive.entity';
@@ -35,10 +35,10 @@ export class DepositosService {
       }
     }) 
 
-    console.log("foramtando corretamente.......", spreadSheetFinal[0])
+    
 
-    const insertPrisma = await this.prismaService.depositos.create({
-      data: spreadSheetFinal[0]
+    const insertPrisma = await this.prismaService.depositos.createMany({
+      data: spreadSheetFinal
     })
 
     return {message: "item inserido com sucesso"};
