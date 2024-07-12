@@ -127,6 +127,8 @@ Para executar o projeto tanto local quanto para deploy basta seguir os passos ab
 
   <ul>
      <li>Ter docker instalado</li>
+          <li>Crie na raiz do seu projeto os arquivos <strong>Dockerfile</strong> e também o arquivo <strong>docker-compose.yml
+</strong> </li>
    <li>Garantir que a pasta <strong>certs</strong> está na raiz o do projeto com o certificado digital e sua chave.</li>
    <li>Garanta que as configurações do arquivo <strong>  main.js </strong> na pasta src da aplicação para funcionar com ssh</li>
    <li>Seguir os passos abaixo</li>
@@ -206,7 +208,6 @@ Para executar o projeto tanto local quanto para deploy basta seguir os passos ab
         # Creates a "dist" folder with the production build
         RUN npm run build
 
-        # EXPOSE 2106
         # Start the server using the production build
         CMD [ "node", "dist/main" ]
 
@@ -219,7 +220,7 @@ Para executar o projeto tanto local quanto para deploy basta seguir os passos ab
       version: '3.9'
         services:
         api:
-            image: repoimage/nome_iamgem:1.2.5
+            image: repoimage/nome_imagem:1.2.5
             build: .
             env_file:
               .env
