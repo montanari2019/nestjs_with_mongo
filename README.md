@@ -60,8 +60,6 @@ O objetivo desta aplicação é explorar a utilização do MongoDB para criar um
 
 </br>
 
-<p> <a target="_blank" href="https://servicescredisul.com.br:2106/api/docs">Click Aqui para acessar a aplicação</a> </p>
-
 # Tecnologias
 
 <ul>
@@ -70,7 +68,7 @@ O objetivo desta aplicação é explorar a utilização do MongoDB para criar um
 
    </li>
       <li>
-      <a target="_blank" href="https://www.npmjs.com/">Npm</a>
+      <a target="_blank" href="https://www.mongodb.com/">Mongo</a>
     </li>
    <li>
         <a  target="_blank"href="https://www.prisma.io/">Prisma IO</a>
@@ -102,7 +100,7 @@ Para executar o projeto tanto local quanto para deploy basta seguir os passos ab
  <br/>
 
       #clone este repositório
-      $ git clone <https://github.com/Sicoob-Credisul/posicao-diaria-back.git>
+      $ git clone <https://github.com/montanari2019/nestjs_with_mongo.git>
 
       # Acesse a pasta do projeto no terminal/cmd
       $ cd posicao-diaria-back
@@ -121,16 +119,21 @@ Para executar o projeto tanto local quanto para deploy basta seguir os passos ab
 
 
       # Servidor ira executar na porta indicada -
-      $ acesse <http://localhost:2106 porta indiciada/>
+      $ acesse <http://localhost:3000 porta indiciada/>
 
 <br/> <br/>
-###Para executar o docker
 
-   <li>Ter docker instalado</li>
+### Para executar o docker
+
+  <ul>
+     <li>Ter docker instalado</li>
    <li>Garantir que a pasta <strong>certs</strong> está na raiz o do projeto com o certificado digital e sua chave.</li>
    <li>Garanta que as configurações do arquivo <strong>  main.js </strong> na pasta src da aplicação para funcionar com ssh</li>
    <li>Seguir os passos abaixo</li>
-    <br/>
+   <li><strong>observação</strong/>: caso não queira executar o docker com ssh basta apenas remover os scripts que são relacionados a pasta certs</li>
+  </ul>
+  
+  <br/>
 
       #Arquivo main.ts
 
@@ -216,12 +219,12 @@ Para executar o projeto tanto local quanto para deploy basta seguir os passos ab
       version: '3.9'
         services:
         api:
-            image: repoimage/sicoob-back-psd:1.2.5
+            image: repoimage/nome_iamgem:1.2.5
             build: .
             env_file:
               .env
             ports:
-              - 2106:2106
+              - 3000:3000
 
 </br>
 </br>
@@ -233,13 +236,26 @@ Para executar o projeto tanto local quanto para deploy basta seguir os passos ab
       # Execute o push da sua imagem para o docker hub
       $ docker push nome_da_iamgem:lasted
 
-      # Acesse o seu servidor alinhado com a equipe de TI da cooperativa
+      # Acesse o seu servidor
       ## execute o comando abaixo para executar o docker no servidor hospede
 
-      $ docker run -d --name nome_contianer -p 2106:2106 --restart always nome_da_imagem:lasted
+      $ docker run -d --name nome_contianer -p 3000:300 --restart always nome_da_imagem:lasted
 
 </ul>
 
-# Autores
+# Licença
 
-<p dir="auto">Ikaro Montanari (desenvolvedor) - Operacional</p>
+<p dir="auto">Distribuído sob a licença MIT. Veja <code>LICENSE</code> para mais informações.</p>
+
+# Autor
+
+<p dir="auto">Ikaro Montanari, entusiasta por tecnologia e desenvolvedor front-end</p>
+<p dir="auto">Formado em Análie e Desenvolvimento de Sistemas pelo IFRO em Vilhena-RO</p>
+
+<p dir="auto">Desenvolvedor FullStack na Sicoob Credisul</p>
+
+# Contato
+
+<p>Linkedin <a target="_blank" href="https://www.linkedin.com/in/ikaro-montanari-5aa120208/">Ikaro Montanari</a> </p>
+<p>Instagram  <a target="_blank" href="https://www.instagram.com/ikaro.montanari/">@ikaro_montanari</a> </p>
+<p>Telefone <a target="_blank" href="https://api.whatsapp.com/send?phone=5569993569547&text=Ol%C3%A1%20ikaro">(69) 99356-9547</a> </p>
