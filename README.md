@@ -1,73 +1,245 @@
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <a href="https://www.prisma.io/" target="blank"><img src="https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/prisma/prisma-original.svg" width="200" alt="Nest Logo" /></a>
+  <a href="https://www.mongodb.com/" target="blank"><img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<div align="center">
+   
+</div>
+<h1 align="center" >Api NestJS with MongoDB and Prisma io</h1 >
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<h2 style="" >Tabela de Conteúdo</h2>
 
-## Description
+<ul>
+   <li><a href="#tabela">Tabela de Conteúdo</a></li>
+   <li><a href="#sobre">Sobre</a></li>
+   <li><a href="#tecnologias">Tecnologias</a></li>
+   <li><a href="#requisitos">Requisitos</a></li>
+   <li><a href="#autores">Autor</a></li>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+</ul>
 
-## Installation
+</br>
 
-```bash
-$ npm install
-```
+# Sobre
 
-## Running the app
+<p dir="auto">
+A aplicação back-end é uma API REST desenvolvida em NestJS. Ela utiliza o banco de dados MongoDB e o ORM Prisma para gerenciar as operações de persistência de dados. Este projeto foi criado exclusivamente para fins de estudo, visando a compreensão e a prática de tecnologias modernas de desenvolvimento web.
+</br>
 
-```bash
-# development
-$ npm run start
+# Objetivo
 
-# watch mode
-$ npm run start:dev
+O objetivo desta aplicação é explorar a utilização do MongoDB para criar uma API REST. Este projeto foi desenvolvido como parte de um desafio para testar bancos de dados não relacionais, com a finalidade de futuramente construir um data lake. Através desta aplicação, busca-se entender melhor as opções disponíveis e adquirir experiência prática com MongoDB e a integração com APIs REST.
 
-# production mode
-$ npm run start:prod
-```
+# Características Principais
 
-## Test
+- **Modularidade**: Facilita a organização do código em módulos, tornando o desenvolvimento e a manutenção mais gerenciáveis.
 
-```bash
-# unit tests
-$ npm run test
+- **Injeção de Dependência**s: Promove a reutilização e a testabilidade do código.
 
-# e2e tests
-$ npm run test:e2e
+- **Arquitetura**: Baseado na arquitetura de servidores modernos, usando controladores, provedores e middleware.
 
-# test coverage
-$ npm run test:cov
-```
+- **Suporte para TypeScript**: Aproveita os recursos do TypeScript para aumentar a segurança e a produtividade.
 
-## Support
+- **Banco de Dados NoSQL**: Armazena dados em documentos JSON flexíveis, permitindo um esquema dinâmico.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- **Escalabilidade**: Suporta a distribuição de dados em várias máquinas.
 
-## Stay in touch
+- **Alto Desempenho**: Oferece consultas rápidas e eficientes, suportando grandes volumes de dados.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- **ORM**: Facilita a interação com o banco de dados, abstraindo consultas SQL complexas.
 
-## License
+- **Type Safety**: Garante segurança de tipo nas operações do banco de dados, integrando-se bem com TypeScript.
 
-Nest is [MIT licensed](LICENSE).
+- Gerenciamento de Migrações: Simplifica a criação e a aplicação de migrações de esquema.
+
+### Mudança do Prisma para o Mongoose
+
+- Pretende-se trocar o Prisma pelo Mongoose, pois o Prisma não oferece uma forma eficiente de usar classes que podem ser herdadas, algo que o Mongoose suporta de maneira nativa. A utilização de classes e herança no Mongoose permite uma modelagem de dados mais flexível e reutilizável, o que é crucial para o desenvolvimento e a manutenção a longo prazo da aplicação.
+
+</br>
+
+<p> <a target="_blank" href="https://servicescredisul.com.br:2106/api/docs">Click Aqui para acessar a aplicação</a> </p>
+
+# Tecnologias
+
+<ul>
+   <li>
+    <a target="_blank" href="https://nestjs.com/">NestJs</a>
+
+   </li>
+      <li>
+      <a target="_blank" href="https://www.npmjs.com/">Npm</a>
+    </li>
+   <li>
+        <a  target="_blank"href="https://www.prisma.io/">Prisma IO</a>
+
+   </li>
+   <li>
+        <a  target="_blank"href="https://www.docker.com/">Docker</a>
+
+   </li>
+
+   <li>
+        <a  target="_blank"href="https://www.typescriptlang.org/">TypeScript</a>
+
+   </li>
+
+</ul>
+
+</br>
+
+# Requisitos
+
+Para executar o projeto tanto local quanto para deploy basta seguir os passos abaixo. Não se esqueça de se atentar as variáveis de ambiente dispostas no arquivo **_.env.exemple_** que se encontra na raiz do projeto.
+
+<ul>
+   <li>Possuir Node.js versão LTS instalada</li>
+   <li>Possuir NPM instalado (normalmente vem junto ao node.js)</li>
+   <li>Seguir os passos abaixo</li>
+
+ <br/>
+
+      #clone este repositório
+      $ git clone <https://github.com/Sicoob-Credisul/posicao-diaria-back.git>
+
+      # Acesse a pasta do projeto no terminal/cmd
+      $ cd posicao-diaria-back
+
+      # Instale as dependências com o comando
+      $ npm install
+
+      # Execute o comando para iniciar o prisma
+      $ npx prisma generate
+
+      # Execute o comando para regularizar as migrações
+      $ npx prisma migrate dev
+
+      # Execute a aplicação em modo de desenvolvimento
+      $ npm run dev
+
+
+      # Servidor ira executar na porta indicada -
+      $ acesse <http://localhost:2106 porta indiciada/>
+
+<br/> <br/>
+###Para executar o docker
+
+   <li>Ter docker instalado</li>
+   <li>Garantir que a pasta <strong>certs</strong> está na raiz o do projeto com o certificado digital e sua chave.</li>
+   <li>Garanta que as configurações do arquivo <strong>  main.js </strong> na pasta src da aplicação para funcionar com ssh</li>
+   <li>Seguir os passos abaixo</li>
+    <br/>
+
+      #Arquivo main.ts
+
+      async function bootstrap() {
+
+        const httpsOptions = {
+          key: fs.readFileSync("./certs/chave.key"),
+          cert: fs.readFileSync("./certs/newcert.cer"),
+        }
+
+
+        const app = await NestFactory.create(AppModule, {
+          // httpsOptions,
+        });
+
+        app.enableCors({origin: "*"});
+
+
+
+
+        const config = new DocumentBuilder()
+          .setTitle('Performance Corporativa Documentation')
+          .setDescription('This API refers to the creation of a tool to automate the extraction an consumption of large number from the cooperative Sicoob Credisul')
+          .setVersion('1.0')
+          .addTag('Performance Corporation Documentation')
+          .build();
+        const document = SwaggerModule.createDocument(app, config);
+        SwaggerModule.setup('/api/docs', app, document);
+
+        app.useGlobalPipes(
+          new ValidationPipe({
+            transform: true,
+            whitelist: true,
+            forbidNonWhitelisted: true,
+          }),
+        );
+        await app.listen(parseInt(process.env.PORT));
+      }
+      bootstrap();
+
+
+
+
+      --------------------------------------------------------------------------------------
+
+</br>
+</br>
+</br>
+
+      # Arquivo Dockerfile/>
+
+        FROM node
+
+        # Create app directory
+        WORKDIR ./
+
+        # A wildcard is used to ensure both package.json AND package-lock.json are copied
+        COPY package*.json ./
+        COPY prisma ./prisma/
+        # COPY .env .
+
+
+
+        # Install app dependencies
+        RUN npm install
+
+        # Bundle app source
+        COPY . .
+
+        # Creates a "dist" folder with the production build
+        RUN npm run build
+
+        # EXPOSE 2106
+        # Start the server using the production build
+        CMD [ "node", "dist/main" ]
+
+</br>
+</br>
+</br>
+
+      #Arquivo docker-compose.yml
+
+      version: '3.9'
+        services:
+        api:
+            image: repoimage/sicoob-back-psd:1.2.5
+            build: .
+            env_file:
+              .env
+            ports:
+              - 2106:2106
+
+</br>
+</br>
+</br>
+
+      #Execute o comando docker compose
+      $ docker-compose up --build --force-recreate
+
+      # Execute o push da sua imagem para o docker hub
+      $ docker push nome_da_iamgem:lasted
+
+      # Acesse o seu servidor alinhado com a equipe de TI da cooperativa
+      ## execute o comando abaixo para executar o docker no servidor hospede
+
+      $ docker run -d --name nome_contianer -p 2106:2106 --restart always nome_da_imagem:lasted
+
+</ul>
+
+# Autores
+
+<p dir="auto">Ikaro Montanari (desenvolvedor) - Operacional</p>
